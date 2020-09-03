@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Библиотека</title>
+    {% extends 'base.html' %}
+</head>
+<body>
+{% load crispy_forms_tags %}
+{% block content %}
+<hr>
+<div class="page-header">
+    <h3>Издательства:</h3>
+</div>
+<hr>
+
+<div class="col-6">
+<ul>
+    {% for publishinghouse in publishinghouses %}
+    <li class="nav-item">{{ publishinghouse.pub_name }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
+</body>
+</html>
